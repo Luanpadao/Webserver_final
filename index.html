@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="Jquery/FC1.js"></script>
+
+    <title>HALA</title>
+</head>
+<body>
+    <header class="text-center">
+        <a href="#"><img src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/LOGO_IUH.PNG?raw=true" title="Trường Đại học Công nghiệp Thành phố Hồ Chí Minh"
+                class="img-fluid m-0" alt=""></a>
+        <div id="title" class="text-uppercase text-center fw-bold">Đề Tài: Thiết kế hệ thống lưu kho tự động và giám sát
+            bằng mã QR
+        </div>
+        <nav class="navbar navbar-expand-md bg-light p-0" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/logo_HALA.png?raw=true" title="logo_HALA" height="60px" alt="Logo">
+                    HALA
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown " id="n">
+                            <a class="nav-link dropdown-toggle active" id="bt_introduce" href="#introduce" role="button"
+                                aria-expanded="false">
+                                INTRODUCE
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="bt_tongquan" href="#TongQuan">TỔNG QUAN</a></li>
+                                <hr class="dropdown-divider">
+                                <li><a class="dropdown-item" id="bt_mohinh" href="#MoHinh">MÔ HÌNH</a></li>
+                                <li>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" id="bt_control" href="#control">
+                                CONTROL
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" id="bt_intructor" href="#intructor"> INTRUCTOR</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="bt_member" href="#member" role="button"
+                            aria-expanded="false">
+                            MEMBER
+                            </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" id="bt_member1" href="#member1">Bạch Hoàng Ân</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" id="bt_member2" href="#member2">Trần Tiến Anh</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" id="bt_member3" href="#member3">Nguyễn Phan Châu Huân</a>
+                            </li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" id="bt_member4" href="#member4">Nguyễn Thành Luân</a></li>
+                            <li>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" id="content">
+        <div id="introduce">
+            <div id="banner">
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    </div>
+                    
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/background-plc.jpg?raw=true" alt="" class="d-block">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://www.infoplc.net/media/k2/items/cache/384ad86f2bc78174ef5499506b7b7703_XL.jpg" alt="" class="d-block">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://ctisupply.vn/wp-content/uploads/2020/03/step-7-basic-and-s7-1200.png" alt="" class="d-block">
+                      </div>
+                    </div>
+                    
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </button>
+                  </div>
+            </div>
+            <h1 id="TongQuan"> <br>Tổng Quan:</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui vel perspiciatis sapiente. Distinctio nulla
+                dolore qui nemo non consequatur ullam quo, asperiores aut repellat nostrum perspiciatis iure odio quos
+                necessitatibus similique, minima quibusdam nesciunt quis modi commodi hic sapiente aspernatur
+                voluptates?
+                Consectetur ab, quasi excepturi eum cum suscipit voluptate? Molestiae nostrum assumenda veritatis
+                dolore,
+                minima numquam itaque quibusdam voluptate commodi maiores nobis doloremque accusantium ducimus veniam ut
+                delectus amet, neque sunt et cumque, dolorum voluptatibus saepe eligendi! Nobis odit optio accusantium
+                in
+                officia? Architecto, molestias. Molestiae qui excepturi quasi similique vero, quis, error, expedita
+                culpa
+                aliquid deserunt blanditiis tempore impedit.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui vel perspiciatis sapiente. Distinctio nulla
+                dolore qui nemo non consequatur ullam quo, asperiores aut repellat nostrum perspiciatis iure odio quos
+                necessitatibus similique, minima quibusdam nesciunt quis modi commodi hic sapiente aspernatur
+                voluptates?
+                Consectetur ab, quasi excepturi eum cum suscipit voluptate? Molestiae nostrum assumenda veritatis
+                dolore,
+                minima numquam itaque quibusdam voluptate commodi maiores nobis doloremque accusantium ducimus veniam ut
+                delectus amet, neque sunt et cumque, dolorum voluptatibus saepe eligendi! Nobis odit optio accusantium
+                in
+                officia? Architecto, molestias. Molestiae qui excepturi quasi similique vero, quis, error, expedita
+                culpa
+                aliquid deserunt blanditiis tempore impedit.</p>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui vel perspiciatis sapiente. Distinctio nulla
+                dolore qui nemo non consequatur ullam quo, asperiores aut repellat nostrum perspiciatis iure odio quos
+                necessitatibus similique, minima quibusdam nesciunt quis modi commodi hic sapiente aspernatur
+                voluptates?
+                Consectetur ab, quasi excepturi eum cum suscipit voluptate? Molestiae nostrum assumenda veritatis
+                dolore,
+                minima numquam itaque quibusdam voluptate commodi maiores nobis doloremque accusantium ducimus veniam ut
+                delectus amet, neque sunt et cumque, dolorum voluptatibus saepe eligendi! Nobis odit optio accusantium
+                in
+                officia? Architecto, molestias. Molestiae qui excepturi quasi similique vero, quis, error, expedita
+                culpa
+                aliquid deserunt blanditiis tempore impedit.</p>
+            <h1 id="MoHinh">Mô Hình:</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui vel perspiciatis sapiente. Distinctio nulla
+                dolore qui nemo non consequatur ullam quo, asperiores aut repellat nostrum perspiciatis iure odio quos
+                necessitatibus similique, minima quibusdam nesciunt quis modi commodi hic sapiente aspernatur
+                voluptates?
+                Consectetur ab, quasi excepturi eum cum suscipit voluptate? Molestiae nostrum assumenda veritatis
+                dolore,
+                minima numquam itaque quibusdam voluptate commodi maiores nobis doloremque accusantium ducimus veniam ut
+                delectus amet, neque sunt et cumque, dolorum voluptatibus saepe eligendi! Nobis odit optio accusantium
+                in
+                officia? Architecto, molestias. Molestiae qui excepturi quasi similique vero, quis, error, expedita
+                culpa
+                aliquid deserunt blanditiis tempore impedit.</p>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui vel perspiciatis sapiente. Distinctio nulla
+                dolore qui nemo non consequatur ullam quo, asperiores aut repellat nostrum perspiciatis iure odio quos
+                necessitatibus similique, minima quibusdam nesciunt quis modi commodi hic sapiente aspernatur
+                voluptates?
+                Consectetur ab, quasi excepturi eum cum suscipit voluptate? Molestiae nostrum assumenda veritatis
+                dolore,
+                minima numquam itaque quibusdam voluptate commodi maiores nobis doloremque accusantium ducimus veniam ut
+                delectus amet, neque sunt et cumque, dolorum voluptatibus saepe eligendi! Nobis odit optio accusantium
+                in
+                officia? Architecto, molestias. Molestiae qui excepturi quasi similique vero, quis, error, expedita
+                culpa
+                aliquid deserunt blanditiis tempore impedit.</p>
+
+        </div>
+
+        <div id="control" class="container">
+            <div class="text-center bg-light">SCADA</div>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="object" id="scada">
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-1 col-1" >
+                            <span class="text-dark h4 m-0">1</span>
+                            <img class="d-none" id="n1" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-1 col-2" >
+                            <span class="text-dark h4 m-0">2</span>
+                            <img class="d-none" id="n2" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-1 col-3" >
+                            <span class="text-dark h4 m-0">3</span>
+                            <img class="d-none" id="n3" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-2 col-1" >
+                            <span class="text-dark h4 m-0">4</span>
+                            <img class="d-none" id="n4" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-2 col-2" >
+                            <span class="text-dark h4 m-0">5</span>
+                            <img class="d-none" id="n5" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-2 col-3" >
+                            <span class="text-dark h4 m-0">6</span>
+                            <img class="d-none" id="n6" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-3 col-1" >
+                            <span class="text-dark h4 m-0">7</span>
+                            <img class="d-none" id="n7" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-3 col-2" >
+                            <span class="text-dark h4 m-0">8</span>
+                            <img class="d-none" id="n8" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-3 col-3" >
+                            <span class="text-dark h4 m-0">9</span>
+                            <img class="d-none" id="n9" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-1 col-4" >
+                            <span class="text-dark h4 m-0">10</span>
+                            <img class="d-none" id="n10" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-1 col-5" >
+                            <span class="text-dark h4 m-0">11</span>
+                            <img class="d-none" id="n11" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-1 col-6" >
+                            <span class="text-dark h4 m-0">12</span>
+                            <img class="d-none" id="n12" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-2 col-4" >
+                            <span class="text-dark h4 m-0">13</span>
+                            <img class="d-none" id="n13" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-2 col-5" >
+                            <span class="text-dark h4 m-0">14</span>
+                            <img class="d-none" id="n14" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-2 col-6" >
+                            <span class="text-dark h4 m-0">15</span>
+                            <img class="d-none" id="n15" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-3 col-4" >
+                            <span class="text-dark h4 m-0">16</span>
+                            <img class="d-none" id="n16" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true" style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-3 col-5" >
+                            <span class="text-dark h4 m-0">17</span>
+                            <img class="d-none" id="n17" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <div class="rounded-circle bg-white border border-dark d-flex align-items-center justify-content-center row-3 col-6" >
+                            <span class="text-dark h4 m-0">18</span>
+                            <img class="d-none" id="n18" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/box.png?raw=true"style="width: 100%;">
+                        </div>
+                        <img class="row-5" id="ss_i1" style="width: 2%;">
+                        <img class="row-5" id="ss_i2" style="width: 2%;">
+                        <img class="row-5" id="ss_o" style="width: 2%;">
+                        <img class="row-5" id="dc_i" style="width: 12%;">
+                        <img class="row-5" id="dc_o" style="width: 12%;">
+                        <img class="row-4" id="mt_i" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/mt_1.png?raw=true"style="width: 7%;">
+                        <img class="row-4"id="mt_o" src="https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/mt_1.png?raw=true"style="width: 7%;">
+                    </div>
+                </div>
+                <div class="col-md-5" id="group_panel">
+                    <form>
+                        <!-------------------------------------------- POSITION ------------------------------------------------->
+                        <div class="row text-center">
+                          <label class="bg-primary">POSITION</label>
+                        </div>
+                        <div class="row text-center">
+                            <label class="form-text">ROBOT ĐANG DI CHUYỂN</label>
+                        </div>
+                        <div class="row form-text-label text-center" id="position">
+                            <div class="col-md-4">
+                                x-scale
+                            </div>
+                            <div class="col-md-4">
+                                y-scale
+                            </div>
+                            <div class="col-md-4">
+                                z-scale
+                            </div>
+                        </div>
+                        <div class="row form-text-label text-center" id="lb_position">
+                            <div class="col-md-4 pos">
+                                <label id="p1">300</label>
+                            </div>
+                            <div class="col-md-4 pos">
+                                <label id="p2">10</label>
+                            </div>
+                            <div class="col-md-4 pos">
+                                <label id="p3">-200</label>
+                            </div>
+                        </div>
+                        <!-------------------------------------------- INFORMATION ------------------------------------------------->
+                        <div class="row text-center mt-2">
+                            <label class="bg-primary">INFORMATION</label>
+                        </div>
+                        <div class="row form-text-label mt-1 text-center">
+                            <div class="col-md-3">
+                                <label>QRcode</label>
+                            </div>
+                            <div class="col-md-9" >
+                                <input id="i1" type="text" size="12" disabled>
+                            </div>
+                        </div>
+                        <div class="row form-text-label mt-1 text-center">
+                            <div class="col-md-3">
+                                <label>Type</label>
+                            </div>
+                            <div class="col-md-9" >
+                                <input id="i2" type="text" size="12" disabled>
+                            </div>
+                        </div>
+                        <div class="row form-text-label mt-1 text-center">
+                            <div class="col-md-3">
+                                <label>Name</label>
+                            </div>
+                            <div class="col-md-9" >
+                                <input id="i3" type="text" size="12" disabled>
+                            </div>
+                        </div>
+                        <div class="row form-text-label mt-1 text-center">
+                            <div class="col-md-3">
+                                <label>Quantity</label>
+                            </div>
+                            <div class="col-md-9" >
+                                <input id="i4" type="text" size="12" disabled>
+                            </div>
+                        </div>
+                        
+                        <!-------------------------------------------- SETUP ------------------------------------------------->
+                        <div class="row text-center mt-2">
+                            <label class="bg-primary">SETUP</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 form-text-label">
+                                <div class="row mt-1">
+                                    <div class="col-5 text-center">
+                                        <label for="speedx">Speed x:</label>
+                                    </div>
+                                    <div class="col-7" >
+                                        <input class="text-center" id="speedx" type="number" min="1" max="100" value="50"> %
+                                    </div>
+                                </div>
+                                <div class="row mt-1">
+                                    <div class="col-5 text-center">
+                                        <label for="speedy">Speed y:</label>
+                                    </div>
+                                    <div class="col-7" >
+                                        <input class="text-center" id="speedy" type="number" min="1" max="100" value="50"> %
+                                    </div>
+                                </div>
+                                <div class="row mt-1">
+                                    <div class="col-5 text-center">
+                                        <label for="speedx">Speed z:</label>
+                                    </div>
+                                    <div class="col-7" >
+                                        <input class="text-center" id="speedz" type="number" min="1" max="100" value="50"> %
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                            </br>
+                                <button type="button" class="btn btn-secondary bt_setup" title="button setup">SETUP</button>
+                            </div>
+                        </div>
+                    
+                        <!-------------------------------------------- PANEL ------------------------------------------------->
+                        <div class="row text-center mt-2">
+                            <label class="bg-primary">PANEL</label>
+                        </div>
+                        <!---------------- Nút SWITCH chọn chế độ ------------------>
+                        <div id="gd_dk">
+                            <div class="row led" id="power">
+                            </div>
+                            <div class="d-block btn-group mx-auto" id="switch_mode">
+                                <div class="text-center">
+                                  <input type="radio" id="mode1" name="mode" value= 1 checked>
+                                  <label for="mode1">M</label>
+                                  <input type="radio" id="mode2" name="mode" value= 2>
+                                  <label for="mode2">S-A</label>
+                                  <input type="radio" id="mode3" name="mode" value= 3>
+                                  <label for="mode3">A</label>
+                                </div>
+                            </div>
+                            <div class="text-center" >
+                                <input class="text-center" id="mode" type="text" size="12" disabled placeholder="SEMI-AUTO">
+                            </div>
+                            <!---------------- Chế độ MANUAL ------------------>
+                            <div class="mx-auto  btn_group text-center" id="mode_m">
+                                <div class="mx-auto btn_group text-center">
+                                    <button type="button" class="btn btn-secondary buttonx" title="button x+">X+</button> 
+                                    <button type="button" class="btn btn-secondary bt_x-" title="button x-">X-</button>
+                                    <button type="button" class="btn btn-secondary bt_sh" title="button set home">SET HOME</button>
+                                </div>
+                                <div class="mx-auto btn_group text-center">
+                                    <button type="button" class="btn btn-secondary buttony" title="button y+">Y+</button> 
+                                    <button type="button" class="btn btn-secondary bt_y-" title="button y-">Y-</button>
+                                    <button type="button" class="btn btn-secondary bt_home" title="button home">HOME</button>
+                                </div>
+                                <div class="mx-auto btn_group text-center">
+                                    <button type="button" class="btn btn-secondary buttonz" title="button z+">Z+</button> 
+                                    <button type="button" class="btn btn-secondary bt_z-" title="button z-">Z-</button>
+                                    <button type="button" class="btn btn-secondary bt_hd" title="button home default">HOME DEFAULT</button>
+                                </div>
+                            </div>
+                            <!---------------- chế độ SEMI-AUTO ------------------>
+                            <div class="mx-auto btn_group text-center" id="mode_sa">
+                                <div class="mx-auto btn_group text-center">
+                                    <button type="button" class="btn btn-secondary bt_import" title="button import">IMPORT</button> 
+                                    <button type="button" class="btn btn-secondary bt_export" title="button export">EXPORT</button>
+                                </div>
+                                <button type="button" class="btn btn-secondary bt_run" title="button run">RUN</button>
+                                <div class="mx-auto  btn_group text-center">
+                                    <button type="button" class="btn btn-secondary bt_reset" title="button reset">RESET</button> 
+                                    <button type="button" class="btn btn-secondary bt_e-stop" title="button e-stop">E-STOP</button>
+                                </div>
+                            </div>
+                            <!------------------ chế độ AUTO -------------------->
+                            <div class="mx-auto  btn_group text-center" id="mode_a">
+                                <div class="mx-auto btn_group text-center">
+                                    <button type="button" class="btn btn-secondary bt_import" title="button import">IMPORT</button> 
+                                    <button type="button" class="btn btn-secondary bt_export" title="button export">EXPORT</button>
+                                </div>
+                                <button type="button" class="btn btn-secondary bt_start" title="button start">START</button> 
+                                <button type="button" class="btn btn-secondary bt_stop" title="button stop">STOP</button>
+                                <div class="mx-auto  btn_group text-center">
+                                    <button type="button" class="btn btn-secondary bt_reset" title="button reset">RESET</button> 
+                                    <button type="button" class="btn btn-secondary bt_e-stop" title="button e-stop">E-STOP</button>
+                                </div>
+                            </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+                <div class="text-center bg-light">TABLE</div>
+                <div>
+                    <h6 class="text-center text-danger">BẢNG THỐNG KÊ XUẤT NHẬP KHO</h6>
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                          <tr>
+                            <th>Vị trí</th>
+                            <th>Mã QR code</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Loại sản phẩm</th>
+                            <th>Xuất/Nhập</th>
+                            <th>Ngày</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>12345-a</td>
+                            <td>bút bi</td>
+                            <td>loại 1</td>
+                            <td>Nhập</td>
+                            <td>27/02/2023</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>12345-b</td>
+                            <td>bút bi</td>
+                            <td>Loại 1</td>
+                            <td>Nhập</td>
+                            <td>27/02/2023</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>12345-c</td>
+                            <td>bút bi</td>
+                            <td>Loại 1</td>
+                            <td>Nhập</td>
+                            <td>27/02/2023</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+        </div>
+        <div id="intructor">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image"
+                    style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Th.S Hà Chí Kiên</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and
+                            engineer</p>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+            </div>
+        </div>
+        <div id="member" class="m-0">
+            <div class="row justify-content-center justify-content-between">
+                <div class="card" id="member1" style="width:400px">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Bạch Hoàng Ân</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and
+                            engineer</p>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+                <div class="card" id="member2" style="width:400px">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Trần Tiến Anh</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and
+                            engineer</p>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center justify-content-between">
+                <div class ="card" id="member3" style="width:400px">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Nguyễn Phan Châu Huân</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer
+                        </p>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+                <div class="card" id="member4" style="width:400px">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"
+                        alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Nguyễn Thành Luân</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer
+                        </p>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div id="back-to-top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </div>
+    <footer class=" bg-dark">
+        <p class="text-center">Author: Nguyễn Thành Luân <br>Address: 19/1, Lê Lợi, phường 4, Gò Vấp, Thành phố Hồ Chí Minh<br>Email:thanhluannguyen200101@gmail.com</p>
+    </footer>
+</body>
+
+</html>
