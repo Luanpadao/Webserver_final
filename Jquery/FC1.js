@@ -492,11 +492,11 @@ function fn_SymbolStatus(ObjectID, SymName, Tag)
         $.getJSON(url, function(result){
             if (result[Tag] == false)
             {
-                ObjectID.classList.add('d-none');
+                document.getElementById(ObjectID).classList.add('d-none');
             }
             else if(result[Tag] == true)
             {
-                ObjectID.classList.remove('d-none');
+                document.getElementById(ObjectID).classList.remove('d-none');
             }
         });
     }
