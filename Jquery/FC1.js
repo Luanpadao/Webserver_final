@@ -476,9 +476,9 @@ function IOField(ObjectID, tag) {
         if(ObjectID == "p1" || ObjectID == "p2" || ObjectID == "p3" )
             document.getElementById(ObjectID).innerHTML = result[tag];
         else if(ObjectID == "speedx" || ObjectID == "speedy" || ObjectID == "speedz")
-        document.getElementById(ObjectID).value = result[tag] * 5;
-        else   
-            document.getElementById(ObjectID).value = result[tag];
+            document.getElementById(ObjectID).value = result[tag] * 5;
+        // else   
+        //     document.getElementById(ObjectID).value = result[tag];
     });
 }
 
@@ -486,18 +486,17 @@ function IOField(ObjectID, tag) {
 // Hàm chức năng hiển thị trạng thái symbol
 function fn_SymbolStatus(ObjectID, SymName, Tag)
 {
+    var url = "IO.html";
     if(ObjectID.substr(0,1) == "n")
     {
-        var obj = document.getElementById(ObjectID);
         $.getJSON(url, function(result){
             if (result[Tag] == false)
             {
-                obj.classList.add('d-none');
+                ObjectID.classList.add('d-none');
             }
-
             else if(result[Tag] == true)
             {
-                obj.classList.remove('d-none');
+                ObjectID.classList.remove('d-none');
             }
         });
     }
@@ -505,7 +504,6 @@ function fn_SymbolStatus(ObjectID, SymName, Tag)
     {
         var imglink_0 = "https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/"+SymName+"_1.png?raw=true"; // Trạng thái tag = 0
         var imglink_1 = "https://github.com/Luanpadao/WebServer_SCADA_HALA/blob/develop/images/Symbol/"+SymName+"_2.png?raw=true"; // Trạng thái tag = 1
-        var url = "IO.html";
         $.getJSON(url, function(result){
             if (result[Tag] == false)
             {
@@ -540,7 +538,7 @@ function getTime() {
 // HIỂN THỊ DỮ LIỆU LÊN WEB cứ mỗi 1s
 setInterval(function(){
     const currentTime = getTime();
-    // console.log(currentTime);
+    console.log(currentTime);
     fn_SymbolStatus("ss_i1","sstc","ss_i1");
     fn_SymbolStatus("ss_i2","sstc","ss_i2");
     fn_SymbolStatus("ss_o","sstc","ss_o");
